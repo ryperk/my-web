@@ -15,9 +15,9 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <div className='h-screen antialiased'>
           <Header />
-
-          {children}
-
+          <div className='max-w-4xl mx-auto py-10'>
+            {children}
+          </div>
           <Footer />
         </div>
       </body>
