@@ -1,12 +1,15 @@
 "use client";
-import Image from 'next/image'
+import { motion } from "framer-motion";
 import Welcome from './welcome_content.mdx';
 
 export default function Home() {
   return (
-    <div className=''>
-      {/* <div className=' font-bold text-xl font-sans'>Hi, i'm Ryan</div> */}
-      <Welcome/>
-    </div>
+    <motion.div
+      initial={{ opacity: 0 , x: -20}}
+      animate={{ opacity: 1 , x: 0}}
+      transition={{ duration: 0.5 }}
+    >
+      <Welcome />
+    </motion.div>
   )
 }

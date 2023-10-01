@@ -1,16 +1,27 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
 
 export default function Header() {
+  const pathname = usePathname()
+  console.log("pathname", pathname)
   return (
-    <div className="max-w-4xl mx-auto border-b border-b-gray-900 py-10">
+    <div className="max-w-4xl mx-auto w-full py-10 px-4">
       <div className="flex justify-between items-center">
-        {/* <h1 className="font-bold text-5xl text-gray-100 font-serif">R</h1> */}
-        <div className="flex flex-row gap-10">
-          <Link href="/" className=" text-gray-400 font-sans active:text-gray-100">home</Link>
-          <Link href="/blog" className=" text-gray-400 font-sans">blog</Link>
-          <Link href="/contact" className=" text-gray-400 font-sans">contact</Link>
-        </div>
+        <motion.div
+          initial={{ opacity:0, y:-20}} 
+          animate={{ opacity:1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          >
+          <div className="flex flex-row gap-10">
+            <Link href="/" className={(pathname === "/") ? "text-gray-100 font-bold" : "text-gray-400 hover:text-gray-100"}>home</Link>
+            <Link href="/blog" className={(pathname === "/blog") ? "text-gray-100 font-bold" : "text-gray-400 hover:text-gray-100"}>blog</Link>
+            <Link href="/contact" className={(pathname === "/contact") ? "text-gray-100 font-bold" : "text-gray-400 hover:text-gray-100"}>contact</Link>
+          </div>
+        </motion.div>
       </div>
+
     </div>
   )
 }
