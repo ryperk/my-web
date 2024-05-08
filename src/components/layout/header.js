@@ -383,7 +383,7 @@ export default function Header() {
           transition={{ duration: 0.5 }}
         >
           <div className="flex flex-row gap-10">
-            <MyDropdown />
+            {/* <MyDropdown /> */}
             <Link href="/" className={(pathname === "/") ? "text-gray-100 font-bold" : "text-gray-400 hover:text-gray-100"}>home</Link>
             <Link href="/blog" className={(pathname === "/blog") ? "text-gray-100 font-bold" : "text-gray-400 hover:text-gray-100"}>blog</Link>
             <Link href="/contact" className={(pathname === "/contact") ? "text-gray-100 font-bold" : "text-gray-400 hover:text-gray-100"}>contact</Link>
