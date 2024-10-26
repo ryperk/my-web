@@ -1,8 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Welcome from './welcome_content';
-
+import Welcome from './home';
 
 export default function Home() {
   return (

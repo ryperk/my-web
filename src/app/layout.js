@@ -1,10 +1,9 @@
 import './globals.css'
-import { Inter, Poppins } from 'next/font/google'
+import { Inter, JetBrains_Mono } from 'next/font/google'
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 
-const inter = Inter({ subsets: ['latin'], display:'swap'})
-// const poppins = Poppins({ subsets: ['latin']})
+const inter = JetBrains_Mono({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Ryan Permana',
