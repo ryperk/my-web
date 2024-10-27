@@ -12,9 +12,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className='dark'>
       <body className={[inter.className, 'font-mono']}>
-        <div className='h-screen flex flex-col antialiased'>
+        <div className='h-screen flex flex-col antialiased bg-white dark:bg-black'>
           <Header />
           <div className='max-w-4xl w-full mx-auto py-0 px-4'>
             {children}

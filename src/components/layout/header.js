@@ -24,9 +24,9 @@ export default function Header() {
           transition={{ duration: 0.5 }}
         >
           <div className="flex flex-row gap-10">
-            <Link href="/" className={(pathname === "/") ? "dark:text-gray-100 font-bold" : "dark:text-gray-200 text-gray-600 dark:hover:text-gray-100"}>home</Link>
-            <Link href="/blog" className={(pathname === "/blog") ? "dark:text-gray-100 font-bold" : "dark:text-gray-200 text-gray-600 dark:hover:text-gray-100"}>blog</Link>
-            <Link href="/contact" className={(pathname === "/contact") ? "dark:text-gray-100 font-bold" : "dark:text-gray-200 text-gray-600 dark:hover:text-gray-100"}>contact</Link>
+            <Link href="/" className={(pathname === "/") ? "dark:text-gray-100 font-bold" : "dark:text-gray-200 text-gray-300 dark:hover:text-gray-100"}>home</Link>
+            <Link href="/blog" className={(pathname === "/blog") ? "dark:text-gray-100 font-bold" : "dark:text-gray-200 text-gray-300 dark:hover:text-gray-100"}>blog</Link>
+            <Link href="/contact" className={(pathname === "/contact") ? "dark:text-gray-100 font-bold" : "dark:text-gray-200 text-gray-300 dark:hover:text-gray-100"}>contact</Link>
           </div>
         </motion.div>
         <DarkModeToggle/>
